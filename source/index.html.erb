@@ -7,4 +7,17 @@ title: Welcome to Middleman
   <p class="doc">
     <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
   </p><!-- .doc -->
+
+  <h2>投稿一覧</h2>
+  <% if data.posts %>
+    <h2></h2>
+    <ul class="post-links">
+      <% data.posts.each do |p| %>
+        <li><%= link_to(p[:title], "/posts/#{p[:id]}.html") %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>投稿はありません。</p>
+  <% end %>
+
 </div><!-- .welcome -->
