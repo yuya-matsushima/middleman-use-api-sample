@@ -11,6 +11,7 @@ layout: false
   <body class="<%= page_classes %>">
 
     <h1 class="post-title"><%= h(post[:title]) %></h1>
+    <span class="post-date">作成日: <%= post[:created_at] %></span>
     <div class="post-content">
       <%= h(post[:content]) %>
     </div>
