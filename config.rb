@@ -47,6 +47,13 @@
 #   end
 # end
 
+activate :data_source do |c|
+  c.root  = "http://192.168.33.10"
+  c.files = [
+    "posts.json"
+  ]
+end
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
