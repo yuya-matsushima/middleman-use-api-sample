@@ -1,0 +1,19 @@
+---
+layout: false
+---
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= h(post[:title]) %></title>
+  </head>
+
+  <body class="<%= page_classes %>">
+
+    <h1 class="post-title"><%= h(post[:title]) %></h1>
+    <div class="post-content">
+      <%= h(post[:content]) %>
+    </div>
+
+  </body>
+</html>

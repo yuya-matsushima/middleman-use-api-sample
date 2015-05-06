@@ -54,6 +54,10 @@ activate :data_source do |c|
   ]
 end
 
+data.posts.each do |p|
+  proxy "posts/#{p[:id]}.html", "templates/post.html", locals: { post: p }, ignore: true
+end
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
